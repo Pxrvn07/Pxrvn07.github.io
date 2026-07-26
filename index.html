@@ -59,64 +59,6 @@
   .orb2 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(123,47,255,0.12) 0%, transparent 70%); bottom: -100px; left: -100px; animation-delay: 3s; }
   @keyframes pulse { 0%,100% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.1); opacity: 1; } }
   .hero-inner { max-width: 900px; width: 100%; }
-
-  /* Codolio Hero Card */
-  .codolio-card {
-    display: inline-flex; align-items: center; gap: 14px;
-    background: linear-gradient(135deg, rgba(0,200,255,0.06), rgba(123,47,255,0.06));
-    border: 1px solid rgba(0,200,255,0.2);
-    border-radius: 14px; padding: 14px 20px;
-    text-decoration: none; cursor: none;
-    transition: all 0.35s ease;
-    margin-bottom: 28px;
-    position: relative; overflow: hidden;
-    backdrop-filter: blur(10px);
-    animation: cardFloat 4s ease-in-out infinite;
-  }
-  .codolio-card::before {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(135deg, rgba(0,200,255,0.08) 0%, rgba(123,47,255,0.04) 100%);
-    opacity: 0; transition: opacity 0.3s;
-  }
-  .codolio-card:hover::before { opacity: 1; }
-  .codolio-card:hover {
-    border-color: rgba(0,200,255,0.5);
-    box-shadow: 0 0 30px rgba(0,200,255,0.2), 0 8px 32px rgba(0,0,0,0.3);
-    transform: translateY(-3px);
-  }
-  @keyframes cardFloat {
-    0%, 100% { box-shadow: 0 0 10px rgba(0,200,255,0.08); }
-    50% { box-shadow: 0 0 22px rgba(0,200,255,0.18); }
-  }
-  .codolio-card-icon {
-    width: 42px; height: 42px; border-radius: 10px;
-    background: linear-gradient(135deg, rgba(0,200,255,0.15), rgba(123,47,255,0.15));
-    border: 1px solid rgba(0,200,255,0.25);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.3rem; flex-shrink: 0;
-    position: relative; z-index: 1;
-  }
-  .codolio-card-info { position: relative; z-index: 1; }
-  .codolio-card-label {
-    font-family: 'JetBrains Mono', monospace; font-size: 0.6rem;
-    color: var(--accent); letter-spacing: 2px; text-transform: uppercase;
-    margin-bottom: 2px;
-  }
-  .codolio-card-val {
-    font-family: 'JetBrains Mono', monospace; font-size: 0.82rem;
-    color: var(--text); font-weight: 600; letter-spacing: 0.5px;
-  }
-  .codolio-card-arrow {
-    font-size: 0.9rem; color: var(--muted);
-    transition: color 0.3s, transform 0.3s;
-    position: relative; z-index: 1; margin-left: 4px;
-  }
-  .codolio-card:hover .codolio-card-arrow { color: var(--accent); transform: translate(2px, -2px); }
-  @media (max-width: 600px) {
-    .codolio-card { padding: 11px 16px; gap: 11px; border-radius: 12px; margin-bottom: 20px; }
-    .codolio-card-icon { width: 36px; height: 36px; font-size: 1.1rem; }
-    .codolio-card-val { font-size: 0.76rem; }
-  }
   .hero-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--accent3); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 24px; display: flex; align-items: center; gap: 12px; }
   .hero-tag::before { content: ''; width: 40px; height: 1px; background: var(--accent3); display: inline-block; }
   .hero-name { font-size: clamp(3.5rem, 8vw, 7rem); font-weight: 800; line-height: 0.95; letter-spacing: -2px; margin-bottom: 12px; background: linear-gradient(135deg, #ffffff 0%, #b0d4ff 50%, var(--accent) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
@@ -594,14 +536,6 @@
   <div class="hero-orb orb2"></div>
   <div class="hero-inner">
     <div class="hero-tag">Available for opportunities</div>
-    <a href="https://codolio.com/profile/pxrvn" target="_blank" rel="noopener noreferrer" class="codolio-card">
-      <div class="codolio-card-icon">⚡</div>
-      <div class="codolio-card-info">
-        <div class="codolio-card-label">Codolio Profile</div>
-        <div class="codolio-card-val">codolio.com/profile/pxrvn</div>
-      </div>
-      <span class="codolio-card-arrow">↗</span>
-    </a>
     <h1 class="hero-name">Praveen<br>Kumar</h1>
     <p class="hero-title">&gt; <span class="typed-text" id="typedText"></span><span class="typed-cursor">_</span></p>
     <p class="hero-desc">Engineering intelligent systems — from AI-driven scheduling algorithms to full-stack web platforms and IoT hardware. Building what matters, one commit at a time.</p>
@@ -613,12 +547,6 @@
   <div class="hero-scroll">Scroll</div>
 </section>
 
-<div class="stats-bar">
-  <div class="stat"><span class="stat-num" data-count="10">0</span><span class="stat-label">Repositories</span></div>
-  <div class="stat"><span class="stat-num" data-count="4">0</span><span class="stat-label">Pinned Projects</span></div>
-  <div class="stat"><span class="stat-num" data-count="5">0</span><span class="stat-label">Tech Domains</span></div>
-  <div class="stat"><span class="stat-num" data-count="100">0</span><span class="stat-label">% Committed</span></div>
-</div>
 
 <section id="projects">
   <div class="container">
