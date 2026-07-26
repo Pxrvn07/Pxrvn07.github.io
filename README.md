@@ -2,7 +2,7 @@
 
 A futuristic, fully responsive personal portfolio website built with pure HTML, CSS, and JavaScript.
 
-🔗 **Live:** [Deploy to GitHub Pages / Netlify / Vercel]
+🔗 **Live:** [pxrvn.me](https://pxrvn.me) · [GitHub Pages](https://pxrvn07.github.io)
 
 ---
 
@@ -157,4 +157,4 @@ Edit CSS variables at the top of `index.html`:
 
 ---
 
-© 2025 Praveen Kumar
+© 2026 Praveen Kumar
