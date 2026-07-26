@@ -149,6 +149,7 @@ Edit CSS variables at the top of `index.html`:
 
 ## 🔗 Links
 
+- Codolio: [codolio.com/profile/pxrvn](https://codolio.com/profile/pxrvn)
 - GitHub: [github.com/Pxrvn07](https://github.com/Pxrvn07)
 - LinkedIn: [linkedin.com/in/pxrvn](https://www.linkedin.com/in/pxrvn)
 - Twitter/X: [@Praveen__06](https://x.com/Praveen__06)
