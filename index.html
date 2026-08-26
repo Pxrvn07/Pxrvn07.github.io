@@ -186,8 +186,33 @@
   #about { padding: 100px 0; }
   .about-grid { display: grid; grid-template-columns: 320px 1fr; gap: 64px; align-items: start; }
   .about-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 32px; position: sticky; top: 100px; }
-  .about-card.codolio-card { display: block; margin-top: 14px; padding: 0; overflow: hidden; position: static; }
-  .codolio-card img { width: 100%; height: auto; display: block; }
+  .about-card.codolio-card { display: block; margin-top: 14px; padding: 22px 20px 18px; overflow: hidden; position: static; text-decoration: none; color: inherit; background: linear-gradient(170deg, #0e1620 0%, #0a1119 60%, #080d14 100%); border-radius: 20px; transition: border-color .3s ease, box-shadow .3s ease, transform .3s ease; }
+  .codolio-card:hover { border-color: rgba(249,115,22,0.35); box-shadow: 0 0 40px rgba(249,115,22,0.12); transform: translateY(-3px); }
+  .cc-head { display: flex; align-items: baseline; gap: 8px; margin-bottom: 18px; }
+  .cc-brand { font-size: 1rem; font-weight: 800; letter-spacing: -0.4px; color: #fff; }
+  .cc-brand span { color: #f97316; }
+  .cc-sub { font-size: 0.72rem; letter-spacing: 2px; color: var(--muted); font-weight: 600; }
+  .cc-avatar-wrap { position: relative; width: 128px; height: 128px; margin: 4px auto 16px; }
+  .cc-avatar-ring { position: absolute; inset: 0; border-radius: 50%; border: 2px solid #f97316; box-shadow: 0 0 26px rgba(249,115,22,0.28); }
+  .cc-avatar { position: absolute; inset: 6px; width: calc(100% - 12px); height: calc(100% - 12px); border-radius: 50%; object-fit: cover; background: #111c28; }
+  .cc-avatar-fallback { position: absolute; inset: 6px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--accent2), var(--accent)); color: #fff; font-size: 2rem; font-weight: 800; letter-spacing: -1px; }
+  .cc-name { display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 1.25rem; font-weight: 700; color: var(--text); }
+  .cc-verified { width: 16px; height: 16px; flex-shrink: 0; }
+  .cc-handle { display: block; width: fit-content; margin: 8px auto 18px; padding: 3px 12px; border-radius: 999px; background: rgba(255,255,255,0.06); color: var(--muted); font-size: 0.82rem; font-weight: 600; }
+  .cc-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+  .cc-stat { background: rgba(255,255,255,0.035); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 10px 8px 12px; text-align: center; }
+  .cc-stat-label { font-size: 0.72rem; color: var(--accent3); font-weight: 600; margin-bottom: 6px; }
+  .cc-stat-val { font-size: 1.9rem; font-weight: 700; color: var(--text); line-height: 1; font-variant-numeric: tabular-nums; }
+  .cc-block { background: rgba(255,255,255,0.035); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 10px 12px 12px; margin-bottom: 12px; }
+  .cc-block-label { font-size: 0.72rem; color: var(--muted); text-align: center; margin-bottom: 8px; }
+  .cc-pills { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
+  .cc-pill { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.3px; padding: 3px 9px; border-radius: 999px; border: 1px solid currentColor; opacity: 0.9; }
+  .cc-tags { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
+  .cc-tag { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.5px; padding: 4px 10px; border-radius: 999px; background: rgba(255,255,255,0.06); color: var(--muted); }
+  .cc-foot { display: flex; align-items: center; justify-content: center; gap: 7px; margin-top: 14px; font-size: 0.68rem; color: var(--muted); }
+  .cc-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent3); box-shadow: 0 0 8px var(--accent3); animation: ccPulse 2s ease-in-out infinite; }
+  @keyframes ccPulse { 0%,100% { opacity: 1; } 50% { opacity: 0.25; } }
+  @media (prefers-reduced-motion: reduce) { .cc-dot { animation: none; } }
   .avatar-wrap { width: 80px; height: 80px; border-radius: 12px; background: linear-gradient(135deg, var(--accent2), var(--accent)); display: flex; align-items: center; justify-content: center; font-size: 1.6rem; font-weight: 800; color: white; margin-bottom: 20px; box-shadow: 0 0 30px rgba(0,200,255,0.3); letter-spacing: -1px; }
   .about-name { font-size: 1.4rem; font-weight: 700; margin-bottom: 4px; color: var(--text); line-height: 1.2; }
   .about-role { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--accent); letter-spacing: 1px; margin-bottom: 20px; }
@@ -469,6 +494,11 @@
       display: grid; grid-template-columns: auto 1fr; gap: 0 16px;
       align-items: start;
     }
+    /* the Codolio card stays a single stacked column */
+    .about-card.codolio-card { display: block; padding: 20px 16px 16px; border-radius: 16px; }
+    .cc-avatar-wrap { width: 104px; height: 104px; }
+    .cc-name { font-size: 1.15rem; }
+    .cc-stat-val { font-size: 1.7rem; }
     .avatar-wrap {
       width: 56px; height: 56px; font-size: 1.1rem;
       margin-bottom: 0; border-radius: 10px; grid-row: 1 / 3;
@@ -748,12 +778,37 @@
     <div class="about-grid">
       <div>
         
-        <a href="https://codolio.com/profile/pxrvn/card" target="_blank" rel="noopener noreferrer" class="about-card codolio-card reveal">
-          <img
-            src="assets/codolio-profile-card.png"
-            alt="Dark Codolio problem-solving card for Praveen Kumar: 460 questions solved and 18 active days"
-            loading="lazy"
-          />
+        <a href="https://codolio.com/profile/pxrvn" target="_blank" rel="noopener noreferrer" class="about-card codolio-card reveal" id="codolioCard" aria-label="Codolio problem-solving profile for Praveen Kumar">
+          <div class="cc-head"><span class="cc-brand">Cod<span>olio</span></span><span class="cc-sub">CARD</span></div>
+          <div class="cc-avatar-wrap">
+            <div class="cc-avatar-ring"></div>
+            <div class="cc-avatar-fallback" id="ccFallback">PK</div>
+            <img class="cc-avatar" id="ccAvatar" alt="" hidden />
+          </div>
+          <div class="cc-name">
+            <span id="ccName">Praveen kumar</span>
+            <svg class="cc-verified" id="ccVerified" viewBox="0 0 24 24" fill="none" aria-label="Verified" role="img">
+              <path d="M12 2l2.4 1.8 3-.3 1 2.85 2.6 1.55-1 2.85 1 2.85-2.6 1.55-1 2.85-3-.3L12 22l-2.4-1.8-3 .3-1-2.85L3 16.1l1-2.85-1-2.85 2.6-1.55 1-2.85 3 .3z" fill="#00c8ff"/>
+              <path d="M8.5 12.2l2.3 2.3 4.7-4.7" stroke="#020408" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="cc-handle" id="ccHandle">@pxrvn</span>
+          <div class="cc-stats">
+            <div class="cc-stat">
+              <div class="cc-stat-label">Questions Solved</div>
+              <div class="cc-stat-val" id="ccSolved">—</div>
+            </div>
+            <div class="cc-stat">
+              <div class="cc-stat-label">Active Days</div>
+              <div class="cc-stat-val" id="ccDays">—</div>
+            </div>
+          </div>
+          <div class="cc-block" id="ccPlatformBlock" hidden>
+            <div class="cc-block-label">You can find me on ...</div>
+            <div class="cc-pills" id="ccPlatforms"></div>
+          </div>
+          <div class="cc-tags" id="ccTags"></div>
+          <div class="cc-foot"><span class="cc-dot"></span><span id="ccUpdated">syncing…</span></div>
         </a>
       </div>
       <div class="reveal">
@@ -988,6 +1043,88 @@
   function closeModal(){document.getElementById('modalOverlay').classList.remove('open');document.body.style.overflow='';}
   function handleOverlayClick(e){if(e.target===document.getElementById('modalOverlay'))closeModal();}
   document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+
+  /* ---- Codolio card: live stats from assets/codolio.json ----
+     Codolio serves no CORS-enabled API, so a GitHub Action refreshes that
+     file on a schedule and the card renders from it. */
+  const CC_BRANDS = {
+    leetcode:      ['LeetCode',      '#ffa116'],
+    geeksforgeeks: ['GFG',           '#2f8d46'],
+    codechef:      ['CodeChef',      '#c58f5a'],
+    hackerrank:    ['HackerRank',    '#00ea64'],
+    codestudio:    ['Coding Ninjas', '#ff6b35'],
+    codeforces:    ['Codeforces',    '#1f8acb'],
+    atcoder:       ['AtCoder',       '#9aa4ad'],
+    interviewbit:  ['InterviewBit',  '#43b1f2']
+  };
+
+  function ccCountUp(el, target){
+    if (!Number.isFinite(target)) { el.textContent = '—'; return; }
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      el.textContent = target.toLocaleString(); return;
+    }
+    const dur = 900, t0 = performance.now();
+    (function step(now){
+      const k = Math.min(1, (now - t0) / dur);
+      el.textContent = Math.round(target * (1 - Math.pow(1 - k, 3))).toLocaleString();
+      if (k < 1) requestAnimationFrame(step);
+    })(t0);
+  }
+
+  function ccAgo(iso){
+    const then = Date.parse(iso);
+    if (!Number.isFinite(then)) return 'auto-updating';
+    const mins = Math.round((then - Date.now()) / 60000);
+    const rtf = new Intl.RelativeTimeFormat(undefined, { numeric: 'auto' });
+    const [amt, unit] = Math.abs(mins) < 60 ? [mins, 'minute']
+                      : Math.abs(mins) < 1440 ? [Math.round(mins / 60), 'hour']
+                      : [Math.round(mins / 1440), 'day'];
+    return 'updated ' + rtf.format(amt, unit);
+  }
+
+  async function loadCodolio(){
+    const card = document.getElementById('codolioCard');
+    if (!card) return;
+    const $ = id => document.getElementById(id);
+    try {
+      const res = await fetch('assets/codolio.json', { cache: 'no-cache' });
+      if (!res.ok) throw new Error(res.status);
+      const d = await res.json();
+
+      if (d.name) $('ccName').textContent = d.name;
+      if (d.slug) { $('ccHandle').textContent = '@' + d.slug; card.href = d.profileUrl || card.href; }
+      $('ccVerified').hidden = !d.verified;
+
+      ccCountUp($('ccSolved'), d.questionsSolved);
+      ccCountUp($('ccDays'),   d.activeDays);
+      card.setAttribute('aria-label',
+        `Codolio profile for ${d.name || 'Praveen Kumar'}: ${d.questionsSolved} questions solved, ${d.activeDays} active days`);
+
+      const pills = (d.platforms || []).filter(k => CC_BRANDS[k]);
+      if (pills.length){
+        $('ccPlatforms').innerHTML = pills.map(k => {
+          const [label, color] = CC_BRANDS[k];
+          return `<span class="cc-pill" style="color:${color}">${label}</span>`;
+        }).join('');
+        $('ccPlatformBlock').hidden = false;
+      }
+
+      $('ccTags').innerHTML = (d.tags || [])
+        .map(t => `<span class="cc-tag">#${String(t).toUpperCase()}</span>`).join('');
+
+      $('ccUpdated').textContent = ccAgo(d.updatedAt);
+
+      if (d.avatar){
+        const img = $('ccAvatar');
+        img.onload  = () => { img.hidden = false; $('ccFallback').hidden = true; };
+        img.onerror = () => { img.remove(); };
+        img.src = d.avatar;
+      }
+    } catch(e){
+      $('ccUpdated').textContent = 'view live on Codolio ↗';
+    }
+  }
+  loadCodolio();
 </script>
 </body>
 </html>

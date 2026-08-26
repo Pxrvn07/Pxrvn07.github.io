@@ -1,0 +1,30 @@
+{
+  "slug": "pxrvn",
+  "name": "Praveen kumar",
+  "verified": true,
+  "avatar": "https://d2v119jmdj3sxo.cloudfront.net/140989_263701824",
+  "questionsSolved": 910,
+  "activeDays": 31,
+  "tags": [
+    "Java",
+    "DSA",
+    "Python3",
+    "CP",
+    "Python"
+  ],
+  "platforms": [
+    "codechef",
+    "codestudio",
+    "geeksforgeeks",
+    "hackerrank",
+    "leetcode"
+  ],
+  "github": {
+    "handle": "Pxrvn07",
+    "stars": 99,
+    "contributions": 88,
+    "commits": 65
+  },
+  "profileUrl": "https://codolio.com/profile/pxrvn",
+  "updatedAt": "2026-08-26T12:52:05Z"
+}
