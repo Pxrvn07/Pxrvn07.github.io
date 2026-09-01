@@ -3,11 +3,12 @@
   "name": "Praveen kumar",
   "verified": true,
   "avatar": "https://d2v119jmdj3sxo.cloudfront.net/140989_263701824",
-  "questionsSolved": 934,
-  "activeDays": 38,
+  "questionsSolved": 952,
+  "activeDays": 40,
   "tags": [
     "Java",
     "DSA",
+    "MySQL",
     "Python3",
     "CP",
     "Python"
@@ -21,10 +22,10 @@
   ],
   "github": {
     "handle": "Pxrvn07",
-    "stars": 98,
+    "stars": 100,
     "contributions": 94,
     "commits": 67
   },
   "profileUrl": "https://codolio.com/profile/pxrvn",
-  "updatedAt": "2026-08-30T16:22:24Z"
+  "updatedAt": "2026-09-01T16:19:15Z"
 }
